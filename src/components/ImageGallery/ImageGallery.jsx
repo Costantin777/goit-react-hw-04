@@ -1,17 +1,15 @@
-import  ImageCard  from '../ImageCard/ImageCard';
-import css from './ImageGallery.module.css';
+import ImageCard from "../ImageCard/ImageCard";
+import css from "./ImageGallery.module.css";
 
-function ImageGallery({ photos, openModal, modalContent }) {
+function ImageGallery({ photos, handleModal }) {
   return (
     <ul className={css.galleryList}>
-      {photos.map(photo => (
+      {photos.map((photo) => (
         <li className={css.galleryListItem} key={photo.id}>
           <ImageCard
-            openModal={openModal}
-            photoId={photo.id}
-            modalContent={modalContent}
-            desc={photo.alt_description}
-            link={photo.urls.small}
+            handleModal={() =>
+              handleModal(photo.id, photo.alt_description, photo.urls.small)
+            }
           />
         </li>
       ))}
