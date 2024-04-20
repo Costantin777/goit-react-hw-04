@@ -1,15 +1,14 @@
 import css from "./ImageCard.module.css";
 
-function ImageCard({ id, alt, url, openModal, modalContent }) {
-  function handleClick(id) {
-    modalContent(id);
-    openModal();
+function ImageCard({ id, alt, url, openModal }) {
+  function handleClick() {
+    openModal(id);
   }
 
   return (
     <div>
       <img
-        onClick={() => handleClick(id)}
+        onClick={handleClick}
         className={css.listImage}
         src={url}
         alt={alt}

@@ -1,5 +1,5 @@
-import Modal from 'react-modal';
-import css from './ImageModal.module.css';
+import Modal from "react-modal";
+import css from "./ImageModal.module.css";
 
 function ImageModal({ isOpen, closeModal, modalContent }) {
   return (
@@ -10,7 +10,7 @@ function ImageModal({ isOpen, closeModal, modalContent }) {
         onRequestClose={closeModal}
         style={{
           content: {
-            padding: '0',
+            padding: "0",
           },
         }}
       >
