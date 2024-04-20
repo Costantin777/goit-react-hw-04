@@ -1,6 +1,6 @@
-import css from './ImageCard.module.css';
+import css from "./ImageCard.module.css";
 
-function ImageCard({ desc, link, openModal, photoId, modalContent }) {
+function ImageCard({ id, alt, url, openModal, modalContent }) {
   function handleClick(id) {
     modalContent(id);
     openModal();
@@ -9,10 +9,10 @@ function ImageCard({ desc, link, openModal, photoId, modalContent }) {
   return (
     <div>
       <img
-        onClick={() => handleClick(photoId)}
+        onClick={() => handleClick(id)}
         className={css.listImage}
-        src={link}
-        alt={desc}
+        src={url}
+        alt={alt}
       />
     </div>
   );
